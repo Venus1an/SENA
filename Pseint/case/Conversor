@@ -1,0 +1,29 @@
+Algoritmo conversor
+	Definir m como real
+	Escribir "Digita los metros que quieres convertir: "
+	Leer m
+	Escribir "Escoge a que unidad quieres convertir:"
+	Escribir "1.km"
+	Escribir "2.dam"
+	Escribir "3.dm"
+	Escribir "4.cm"
+	Leer unidad
+	Según unidad Hacer
+		1:
+			Escribir "km"
+			km <- m/1000
+			Escribir "El valor es: " ,km
+		2:
+			Escribir "dam"
+			dam <- m/10
+			Escribir "El valor es: ", dam
+		3:
+			Escribir "dm"
+			dm <- m/0.1
+			Escribir "El valor es: ", dm
+		4:
+			Escribir "cm"
+			cm <- m/0.01
+			Escribir "El valor es: " cm
+	FinSegún
+FinAlgoritmo
