@@ -1,0 +1,11 @@
+Algoritmo bonificacion
+	Definir venta, comisión como real
+	Escribir "Ingrese valor de venta: "
+	Leer venta
+	Si venta>250000 Entonces
+		comisión <- venta*10/100
+		Escribir "Su comisión es de: ",comisión
+	SiNo
+		Escribir "Su bonificación es $0"
+	FinSi
+FinAlgoritmo
