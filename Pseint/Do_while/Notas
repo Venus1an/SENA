@@ -1,0 +1,21 @@
+Algoritmo notas
+	Definir rep, alum Como Entero
+	Definir nota Como Real
+	rep <- 1
+	Mientras rep=1 Hacer
+		Escribir 'Digite su nota: '
+		Leer nota
+		Si nota>=3 Entonces
+			alum <- alum+1
+		SiNo
+			Escribir 'Reprobado: '
+		FinSi
+		Escribir 'Escoja una opción: '
+		Escribir '1. Otro alumno'
+		Escribir '2. Finalizar.'
+		Leer opc
+		Repetir
+		
+		Hasta Que opc<2
+	FinMientras
+FinAlgoritmo
