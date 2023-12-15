@@ -5,7 +5,7 @@ Algoritmo Operaciones
 	Escribir '2.IML'
 	Escribir '3.radio'
 	Escribir '4.salir'
-	Escribir 'Escoge una opción'
+	Escribir 'Escoge una opciÃ³n'
 	Leer opc
 	Segun opc  Hacer
 		1:
@@ -13,7 +13,7 @@ Algoritmo Operaciones
 			Definir a,b,c Como Entero
 			Escribir 'ingrese el primer numero'
 			Leer a
-			Escribir 'ingrese el segundo número'
+			Escribir 'ingrese el segundo nÃºmero'
 			Leer b
 			c <- (a+b)
 			Escribir 'el resultado es: ',c
