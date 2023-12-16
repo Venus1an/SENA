@@ -1,0 +1,14 @@
+Algoritmo Tabla_de_multiplicar
+	// Realizar la tabla l de multiplicar deun nuevo numero hasta10
+	Definir multiplicador, numero, tabla, factor_final Como Entero
+	multiplicador <- 1
+	Escribir 'ingresa el número que quieres multiplicar: '
+	Leer numero
+	Escribir 'Ingresa hasta que factor quieres llegar:'
+	Leer factor_final
+	Mientras (multiplicador<=factor_final) Hacer
+		tabla <- numero*multiplicador
+		Escribir numero, 'x', multiplicador, '=', tabla
+		multiplicador <- multiplicador+1
+	FinMientras
+FinAlgoritmo
