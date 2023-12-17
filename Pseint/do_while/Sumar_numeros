@@ -1,0 +1,12 @@
+Algoritmo sumar_numeros
+	Repetir
+		a <- a
+		tot <- tot
+		tot <- tot+a
+		Escribir 'Ingrese un número'
+		Escribir "o"
+		Escribir "Presione 0 para generar suma total"
+		Leer a
+	Hasta Que a=0
+	Escribir 'Total: ', tot
+FinAlgoritmo
