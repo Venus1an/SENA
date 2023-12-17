@@ -1,14 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
-public class juegodedados {
-    /**
-     * @param args
-     */
+import javax.management.StandardEmitterMBean;
+
+public class Juego_De_Dados {
     public static void main(String[] args) {
-
         System.out.println("JUEGO DE DADOS");
 
         Random random = new Random();
+        Scanner teclado = new Scanner(System.in);
         //iniciarJuego = scanner.toString();
         /* 
         int dado1 = 1;
@@ -27,7 +29,7 @@ public class juegodedados {
         for(int i = min; i<=max; i++){
             int getRandom = (int) (Math.random() * (max-min)) + min;
             System.out.println(getRandom);
-    }*/
+        }*/
         /*El conocido juego de dados llamado Craps tiene las
         siguientes reglas:
         1.- Si en el primer lanzamiento de los dados sale 7 u 11 el
@@ -37,33 +39,31 @@ public class juegodedados {
         hasta que salga el numero se obtuvo por primera vez y
         con ello gana, pero si sale el número 7 pierde. */
         //Variable para verificar si es la primera ves que se tira
-       
-        int puntopartida=0;
+        boolean esPrimertirada = true;
+        int puntopartida=0,numeroJugadas;
+        System.out.println("Ingrese el el numero de lanzadas que quiere hacer");
+        numeroJugadas= teclado.nextInt();
 
-        for (int i = 1; i<10; i++){
+        for (int i = 1; i<numeroJugadas +1; i++){
             System.out.println("PARTIDA: " + i);
-            int dado1 = (int) (Math.random()*13)*1;
-            int dado2 = (int) (Math.random()*13)* 1;
-            int J,Q,K=10
-    
+            int dado1 = random.nextInt(6) + 1;
+            int dado2 = random.nextInt(6) + 1;
             System.out.println("Dado #1: "+dado1+" |----| Dado #2: "+dado2);
-            System.out.println("Realiza tirada");
-          
-
 
             int sumadados = dado1 + dado2;
             System.out.println("Suma de dados: "+sumadados);
 
-            
-            if (sumadados ==2) {    
-                    System.out.println("¡Has ganado!");
+            if (esPrimertirada == true) {
+                if (sumadados == 7 || sumadados == 11) {
+                    System.out.println("!Has ganado en la primera tirada¡");
                     break;
-                }else if (sumadados == 12) {
-                    System.out.println("¡vuelve a intentarlo!");
+                }else if (sumadados == 2 || sumadados == 3 || sumadados == 12){
+                    System.out.println("!Has perdido en la primera tirada¡");
                     break;
                 }else{
                     System.out.println("Se establece un punto en: "+sumadados);
                     puntopartida = sumadados;
+                    esPrimertirada = false;
                 }
             }else{
                 if (sumadados == puntopartida) {
@@ -75,5 +75,6 @@ public class juegodedados {
                     break;
                 }
             }
-        }
+        }    
+    }
 }
