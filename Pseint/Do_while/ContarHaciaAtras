@@ -1,0 +1,14 @@
+	Algoritmo ContarHaciaAtras
+		// Este algoritmo cuenta hacia atrás desde un número ingresado por el usuario hasta llegar a cero.
+		
+		// Declaración de variables
+         definir numero Como Entero
+		Escribir("Ingrese un número para contar hacia atrás desde él: ")
+		Leer numero
+		// Proceso
+		REPETIR
+			Escribir(numero)
+			numero = numero - 1
+		HASTA QUE (numero < 0)
+		
+FinAlgoritmo
